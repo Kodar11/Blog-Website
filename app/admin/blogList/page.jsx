@@ -9,12 +9,12 @@ const page = () => {
   const [blogs,setBlogs] = useState([])
 
   const fetchBlogs = async()=>{
-    const response = await axios.get('/api/blog')
+    const response = await axios.get('https://blog-website-loq9b46bv-kodar11s-projects.vercel.app/api/blog')
     setBlogs(response.data.blogs);
   }
 
   const deleteBlog = async(mongoId)=>{
-    const response = await axios.delete('/api/blog',{
+    const response = await axios.delete('https://blog-website-loq9b46bv-kodar11s-projects.vercel.app/api/blog',{
       params:{
         id:mongoId
       }

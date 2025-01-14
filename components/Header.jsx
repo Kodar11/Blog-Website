@@ -14,7 +14,7 @@ const Header = () => {
     const formData = new FormData();
     formData.append("email", email);
 
-    const response = await axios.post('/api/email', formData);
+    const response = await axios.post('https://blog-website-loq9b46bv-kodar11s-projects.vercel.app/api/email', formData);
 
     if (response.data.success) {
       toast.success("Subscribed")

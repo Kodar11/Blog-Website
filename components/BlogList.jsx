@@ -10,7 +10,7 @@ const BlogList = () => {
     const [blogs,setBlogs]= useState([])
 
     const fetchBlogs = async()=>{
-        const response = await axios.get('/api/blog');
+        const response = await axios.get('https://blog-website-loq9b46bv-kodar11s-projects.vercel.app/api/blog');
         setBlogs(response.data.blogs);
         console.log(response.data.blogs);
         
