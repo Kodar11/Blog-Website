@@ -34,7 +34,7 @@ const page = () => {
     // formData.append('authorImg',data.authorImg);
 
     try {
-      const response = await axios.post('https://blog-website-loq9b46bv-kodar11s-projects.vercel.app/api/blog', formData);
+      const response = await axios.post(`${process.env.BASE_URL}/api/blog`, formData);
       if (response.data.success) {
         toast.success("Blog added successfully");
         setImage(false);

@@ -13,7 +13,7 @@ const page = ({ params }) => {
     const [data, setData] = useState(null)
 
     const fetchBlogData = async() => {
-        const response = await axios.get('https://blog-website-loq9b46bv-kodar11s-projects.vercel.app/api/blog',{
+        const response = await axios.get(`${process.env.BASE_URL}/api/blog`,{
             params : {
                 id:params.id
             }

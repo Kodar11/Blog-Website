@@ -9,12 +9,12 @@ const page = () => {
   const [emails, setEmails] = useState([]);
 
   const fetchEmails = async () => {
-    const response = await axios.get('https://blog-website-loq9b46bv-kodar11s-projects.vercel.app/api/email');
+    const response = await axios.get(`${process.env.BASE_URL}/api/email`);
     setEmails(response.data.emails);
   }
 
   const deleteEmail = async (mongoId) => {
-    const response = await axios.delete('https://blog-website-loq9b46bv-kodar11s-projects.vercel.app/api/email',{
+    const response = await axios.delete(`${process.env.BASE_URL}/api/email`,{
       params:{
         id:mongoId
       }
