@@ -48,6 +48,10 @@ const page = () => {
         toast.error("Error");
       }
     } catch (error) {
+      console.log("Image : ",image);
+      console.log("Data : ",data);
+      
+      
       console.error("Error submitting form:", error);
       toast.error("Error occurred while uploading.");
     }
