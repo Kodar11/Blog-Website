@@ -9,12 +9,12 @@ const page = () => {
   const [blogs,setBlogs] = useState([])
 
   const fetchBlogs = async()=>{
-    const response = await axios.get(`${process.env.BASE_URL}/api/blog`)
+    const response = await axios.get(`/api/blog`)
     setBlogs(response.data.blogs);
   }
 
   const deleteBlog = async(mongoId)=>{
-    const response = await axios.delete(`${process.env.BASE_URL}/api/blog`,{
+    const response = await axios.delete(`/api/blog`,{
       params:{
         id:mongoId
       }

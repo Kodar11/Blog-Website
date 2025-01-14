@@ -13,7 +13,7 @@ const page = ({ params }) => {
     const [data, setData] = useState(null)
 
     const fetchBlogData = async() => {
-        const response = await axios.get(`${process.env.BASE_URL}/api/blog`,{
+        const response = await axios.get(`/api/blog`,{
             params : {
                 id:params.id
             }

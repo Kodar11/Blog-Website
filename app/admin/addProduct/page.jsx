@@ -34,7 +34,7 @@ const page = () => {
     // formData.append('authorImg',data.authorImg);
 
     try {
-      const response = await axios.post(`${process.env.BASE_URL}/api/blog`, formData);
+      const response = await axios.post(`/api/blog`, formData);
       if (response.data.success) {
         toast.success("Blog added successfully");
         setImage(false);
